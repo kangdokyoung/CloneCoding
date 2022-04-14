@@ -9,6 +9,11 @@ a{
     text-decoration: none;
     color: var(--text-color);
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 .navbar{
     align-items: center;
     background-color: #4FCBF2;
@@ -39,7 +44,7 @@ a{
     align-items: center;
 }
 .container{
-    width: 600px;
+    width: 1200px;
     height: 400px;
     position: relative;
     background-color: none;
