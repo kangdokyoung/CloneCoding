@@ -7,7 +7,6 @@ body{
 }
 a{
     text-decoration: none;
-    color: var(--text-color);
 }
 img{
     width: 100%;
@@ -32,6 +31,9 @@ ul{
 .navbar_logo{
     font-weight: bold;
     font-size: 20px;
+}
+.navbar_logo a{
+    color: var(--text-color);
 }
 .logo{
     margin-left: 30px;
