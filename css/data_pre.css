@@ -1,0 +1,25 @@
+.banner_menu{
+    list-style-type: none;
+}
+.banner_menu li{
+    float: left;
+    margin-left: 30px;
+}
+.ban2 a, .ban3 a{
+    color: black;
+}
+.banner1{
+    width: 100px;
+    height: 30px;
+    background-color: #00e2d5;
+    border-radius: 60px;
+}
+.ban1{
+    transform: translateY(-4px);
+}
+.ban1 a{
+    color: white;
+}
+.b1{
+    transform: translate(7px, 4px);
+}
