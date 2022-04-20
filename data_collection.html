@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이터 수집</title>
-    <link rel="stylesheet" href="css/data_pre.css">
+    <link rel="stylesheet" href="css/data_col.css">
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
@@ -48,8 +48,21 @@
                     기온 데이터는 1시간 간격으로 화씨단위로(실험에선 섭씨단위로 변환) 값을 가지고 있고, 전력 데이터는 Watt단위로 값을 가지고 있습니다.<br>
                     전력 데이터의 형식이 일반적인 날짜형식인 datetime형이 아니기 때문에 서로의 데이터를 같이 쓰려면 전력 데이터의 날짜 형식을 수정해줘야 합니다.
                 </li>
-                <li>
-                    <img src="" class="image">
+                <li class="paragraph_image">
+                    <img class="image" src="img/pre/london_.weather.png" alt="img">
+                    <div class="img_title">
+                         &#9650; wunderground페이지에서 런던의 날씨 정보를 가지고온 모습
+                    </div>
+
+                    <img class="image" src="img/pre/weather_table.png" alt="img">
+                    <div class="img_title">
+                        &#9650; 해당 사이트는 30분 단위로 기온 값을 가지고 있다.
+                    </div>
+
+                    <img class="image" src="img/pre/london usage.png" alt="img">
+                    <div class="img_title">
+                        &#9650; 런던 가정의 전력 사용량(watt)과 날짜(Unix Timestamp)가 저장된 파일
+                    </div>
                 </li>
             </ul>
         </div>
