@@ -1,0 +1,43 @@
+.banner_menu{
+    list-style-type: none;
+    display: inline-block;
+}
+.banner_menu li{
+    float: left;
+    margin-left: 30px;
+}
+.ban1 a, .ban2 a{
+    color: black;
+}
+.banner3{
+    width: 100px;
+    height: 30px;
+    background-color: #8c00e2;
+    border-radius: 60px;
+}
+.ban3{
+    transform: translateY(-4px);
+}
+.ban3 a{
+    color: white;
+}
+.b3{
+    transform: translate(7px, 4px);
+}
+.deep_learn_main{
+    width: 100%;
+    background-color: rgba(140, 0, 226, 0.1);
+}
+.main_explain{
+    list-style: none;
+}
+.explain_content{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+    padding-left: 70px;
+
+}
+.explain_content h1{
+    margin-top: 0px;
+}

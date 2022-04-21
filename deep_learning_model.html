@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>딥러닝 모델</title>
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/deep_learning.css">
 </head>
 <body>
     <nav class="navbar", id="nav">
@@ -18,5 +19,51 @@
             </li>
         </ul>
     </nav>
+    <div class="banner">
+        <ul class="banner_menu">
+            <li class="ban1">
+                <div class="banner1"><a href="data_collection.html"><div class="b1">데이터 수집</div></a></div>
+            </li>
+            <li class="ban2">
+                <a href="data_preprocessing.html">데이터 전처리</a>
+            </li>
+            <li class="ban3">
+                <div class="banner3"><a href="deep_learning_model.html"><div class="b3">딥러닝 모델</div></a></div>
+            </li>
+        </ul>
+    </div>
+    <div class="main_content">
+        <div class="deep_learn_main">
+            <ul class="main_explain">
+                <li class="explain_content">
+                    <h1>LSTM 모델로 최적의 파라미터 찾기</h1>
+                    해당 페이지에서는 전력 예측에 필요한 파라미터를 조금씩 바꾸면서<br>
+                    <br>
+                    가장 예측 가능성이 좋은 모델을 찾는 과정에 대해 설명한 페이지 입니다.<br>
+                    LSTM(Long Short Term memory)은 시간 흐름에 따라 변화하는 시계열 데이터를 처리하는 기법 중<br>
+                    하나로, 여러개의 데이터가 순서대로 입력되었을 때, 앞서 받은 데이터를 기억하고 별도의 가중치를<br>
+                    부여해 학습에 이용하는 RNN(Recurrent Neural Network) 순환 신경망 기법입니다.<br>
+                    <br>
+                    앞서 입력된 데이터의 결과가 뒤의 데이터의 입력에 영향을 주는 것은 공통된 원리이지만, LSTM은<br>
+                    데이터가 전달되기 전에 가중치 판단을 통해 기억된 값을 넘길지 안넘길지 결정하는 단계가<br>
+                    추가되었다는 차이가 있습니다.<br>
+                    <br>
+                    LSTM은 시간성 정보를 이용한 데이터의 특성을 다루는데 특화되어 있으며, 매우 긴 데이터를<br>
+                    처리하는데 강점을 보입니다.
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="button">
+        <ul>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+            <li><div></div></li>
+        </ul>
+    </div>
 </body>
 </html>

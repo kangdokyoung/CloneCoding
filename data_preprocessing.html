@@ -33,5 +33,57 @@
             </li>
         </ul>
     </div>
+    <div class="main">
+        <div class="data_pre_main">
+            <ul class="main_explain">
+                <li class="explain_content">
+                    데이터를 불러오다 보면 비어있는 값도 있고 엉뚱한 값이 들어가있는 경우도 많습니다.<br>
+                    이 때 필요한 작업이 데이터 전처리입니다.
+                </li>
+            </ul>
+        </div>
+        <div class="main_content">
+            <ul class="main_ul">
+                <li class="main_li">
+                    <h1>전력 데이터 전처리</h1>
+                    전력 데이터에는 6초 간격으로 값들이 저장되어 있습니다.<br>
+                    6초 간격으로 있는 데이터 값을 1시간 단위로 바꾸기 위해<br>
+                    같은 시각(예를 들어 12시 00분 부터 12시 59분 까지 있는 값)에 있는 값들의<br>
+                    최대 전력값을 그 시각의 전력값으로 가져옵니다.
+                </li>
+            </ul>
+            <ul class="image_content">
+                <li class="paragraph_image">
+                    <img class="image" src="img/pre/1hour.png" alt="img">
+                    <div class="img_title">
+                        &#9650; 최대값을 쓰는 이유는 시간 당 전력 요금 산정을 최대값으로 하기 때문이다.
+                    </div>
+                </li>
+
+                <li class="paragraph_image">
+                    <img class="image" src="img/pre/close.png" alt="img">
+                    <div class="img_title">
+                        &#9650; 딥러닝 학습에서 결손 데이터가 있으면 에러가 발생할 수 있기 때문에 결손값들을 예외 처리해줘야 한다.
+                    </div>
+                </li>
+            </ul>
+            <ul class="main2_ul">
+                <li class="main2">
+                    <h1>기온 데이터 전처리</h1>
+                    기상 데이터는 30분 간격으로 저장되어있습니다.<br>
+                    기상 값 사이에 결손 데이터가 있을 경우, 이전 시간 대의 기온 값으로 보관합니다.<br>
+                    그리고 같은 시간대의 두 기온의 평균으로 1시간 단위의 기상 값을 데이터로 나타냈습니다.
+                </li>
+            </ul>
+            <ul class="image_content">
+                <li class="paragraph_image">
+                    <img class="image" src="img/pre/temp.png" alt="img">
+                    <div class="img_title">
+                        &#9650; 13시 50분에 비어있는 기온 값을 13시 20분 값을 가지고 와서 보관.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
