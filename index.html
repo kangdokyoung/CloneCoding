@@ -7,8 +7,14 @@
     <title>전력 예측소</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <script>
+        AOS.init();
+    </script>
+    <div aos="fade-up" data-aos-offset="200" data-aos-easing="ease-out-cubic" data-aos-duration="500"></div>
     <nav class="navbar", id="nav">
         <ul class="navbar_menu">
             <li class="navbar_logo">
@@ -51,17 +57,17 @@
             </li>
         </ul>
         <ul class="vars">
-            <li class="var">
-                <div class="circle1">
+            <li class="var" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                <div class="circle1" >
                     <div id="c1">기온</div>
                 </div>
             </li>
-            <li class="var">
+            <li class="var" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200">
                 <div class="circle2">
                     <div id="c2">휴일</div>
                 </div>
             </li>
-            <li class="var">
+            <li class="var" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1300">
                 <div class="circle3">
                     <div id="c3">한국에서의 전력변수</div>
                 </div>
@@ -77,12 +83,12 @@
             </li>
         </ul>
         <ul class="business">
-            <li class="bus">
+            <li class="bus" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
                 <div class="square1">
                     <div id="s1">스마트 그리드</div>
                 </div>
             </li>
-            <li class="bus">
+            <li class="bus" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
                 <div class="square2">
                     <div id="s2">전력 거래 중개 서비스</div>
                 </div>
