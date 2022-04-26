@@ -41,3 +41,23 @@
 .explain_content h1{
     margin-top: 0px;
 }
+.btn_list{
+    list-style: none;
+}
+.btn_li{
+    margin: 0px;
+    display: inline-block;
+    text-align: center;
+}
+.btn{
+    height: 50px;
+    width: 300px;
+    margin: 0px;
+    margin-top: 10px;
+    background-color: rgb(142, 214, 255);
+    border-radius: 53px;
+    color: white;
+}
+#b1{
+    transform: translateY(60%);
+}
