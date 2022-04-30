@@ -141,6 +141,7 @@ ul{
     font-size: 15px;
     color:black;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 .square1:hover{
     transform: scale(1.1);
@@ -155,6 +156,7 @@ ul{
     font-size: 15px;
     color:black;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 .square2:hover{
     transform: scale(1.1);
@@ -219,6 +221,108 @@ ul{
     line-height: 30px;
 }
 .exit_c1{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.popmenu_c2{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 520px;
+    height: 210px;
+    text-align: center;
+    background-color: rgb(142, 214, 255);
+    border-radius: 60px;
+    line-height: 30px;
+}
+.exit_c2{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.popmenu_c3{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 690px;
+    height: 210px;
+    text-align: center;
+    background-color: rgb(142, 214, 255);
+    border-radius: 60px;
+    line-height: 30px;
+}
+.exit_c3{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.popmenu_s1{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 760px;
+    height: 180px;
+    text-align: center;
+    background-color: rgb(142, 214, 255);
+    border-radius: 60px;
+    line-height: 30px;
+}
+.exit_s1{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.popmenu_s2{
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 830px;
+    height: 240px;
+    text-align: center;
+    background-color: rgb(142, 214, 255);
+    border-radius: 60px;
+    line-height: 30px;
+}
+.exit_s2{
     position: absolute;
     left: 50%;
     bottom: 10px;
