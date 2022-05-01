@@ -7,8 +7,10 @@
     <title>딥러닝 모델</title>
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/deep_learning.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascript/deep_popup.js"></script>
 </head>
-<body>
+<body id="body">
     <nav class="navbar", id="nav">
         <ul class="navbar_menu">
             <li class="navbar_logo">
@@ -56,14 +58,197 @@
     </div>
     <div class="button">
         <ul class="btn_list">
-            <li class="btn_li"><div class="btn"><div id="b1">Feature값에서 Watt 포함여부</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">Dene Layer 구조변경</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">Validation date 설정</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">Batch size 변경</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">데이터 스케일러 설정</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">양방향 LSTM 활성화 함수 지정 여부</div></div></li>
-            <li class="btn_li"><div class="btn"><div id="b1">실험 결과</div></div></li>
+            <li class="btn_li"><div class="btn1"><div id="b1">Feature값에서 Watt 포함여부</div></div></li>
+            <li class="btn_li"><div class="btn2"><div id="b2">Dene Layer 구조변경</div></div></li>
+            <li class="btn_li"><div class="btn3"><div id="b3">Batch Size 변경</div></div></li>
+            <li class="btn_li"><div class="btn4"><div id="b4">Validation date 설정</div></div></li>
+            <li class="btn_li"><div class="btn5"><div id="b5">데이터 스케일러 설정</div></div></li>
+            <li class="btn_li"><div class="btn6"><div id="b6">양방향 LSTM 활성화 함수 지정 여부</div></div></li>
+            <li class="btn_li"><div class="btn7"><div id="b7">실험 결과</div></div></li>
         </ul>
+    </div>
+    <div class="popmenu_b1">
+        <p>
+           <h1>Feature값에서 Watt포함여부</h1> 
+           1,2차 모델에서는 다른 요소들을 최소화하고 데이터셋 분할에서 Feature에 Watt(전력량)의 여부에<br>
+           따라 주기별로 어떤 결고를 보여주는 지 실험했습니다. 1차는 Feature값에 Watt가 포합되어있지 않고<br>
+           Label에만 Y값으로 포함되어 있습니다.<br>
+           학습 결과를 보면 1일 단위에서 거의 학습이 이뤄지지 않았고, 7일 변화폭이 조금 생겼지만 일치 정도는<br>
+           다소 떨어지는 것을 볼 수 있습니다.<br>
+           30일 단위에서는 학습과 예측 주기가 너무 길어서 큰 주기로만 증감이 이뤄지는 문제가 있었습니다.<br>
+           <br>
+           <h2>Feature에 Watt를 포함하지 않은 모델</h2>
+           <img class="img" src="img/deepleaning/first_day.png" alt="img">
+           <div class="img_title">
+                &#9650; 1일 단위에서전력 예측값이 거의 직선 형태로 나타나는 모습
+           </div>
+           <img class="img" src="img/deepleaning/first_week.png" alt="img">
+           <div class="img_title">
+                &#9650; 일주일 단위에서는 전력 예측값에 굴곡이 보임
+           </div>
+           <img class="img" src="img/deepleaning/first_month.png" alt="img">
+           <div class="img_title">
+                &#9650; 한 달 단위에서는 큰 줄기로만 굴곡이 보이고 봉우리에서는 거의 변화가 없는 모습
+           </div>
+           <h2>Feature에 Watt를 포함한 모델</h2>
+           <img class="img" src="img/deepleaning/second_day.png" alt="img">
+           <div class="img_title">
+                &#9650; Watt 포함 1일 단위 그래프
+           </div>
+           <img class="img" src="img/deepleaning/second_week.png" alt="img">
+           <div class="img_title">
+                &#9650; Watt 포함 일주일 단위 그래프
+           </div>
+           <img class="img" src="img/deepleaning/second_month.png" alt="img">
+           <div class="img_title">
+                &#9650; Watt 포함 한 달 단위 그래프
+           </div>
+        </p>
+        <div class="exit_b1">닫기</div>
+    </div>
+    <div class="popmenu_b2">
+        <p>
+            <h1>Dense Layer구조 변경</h1>
+            Dense Layer는 데이터를 학습 시키는 층을 나타낸 것 입니다. 이 실험에서는 층을 4층으로 설정하고,<br>
+            안에 노드의 개수에 따라 예측 결과 값이 어떻게 달라지는 지 확인해보겠습니다.
+            <img class="img" src="img/deepleaning/dense_layer.png" alt="img">
+            <div class="img_title">
+                &#9650; Dense Layer 구조
+            </div>
+            <img class="img" src="img/deepleaning/node1.png" alt="img">
+            <div class="img_title">
+                &#9650; 3차 노드1: 64-64-64-1
+            </div>
+            <img class="img" src="img/deepleaning/node2.png" alt="img">
+            <div class="img_title">
+                &#9650; 4차 노드2: 64-64-64-2
+            </div>
+            전체적으로 큰 차이가 없어 보이지만 4분기 지점에서 노드2로 실험한 결과가 실제값에 좀 더 정확한<br>
+            굴곡으로 나왔습니다. 똑같이 상승, 하강의 방향성을 가지더라도 가은 노드를 반복하여 학습을 반복<br>
+            해 주는 것이 조금 더 효과적임을 알 수 있습니다.
+        </p>
+        <div class="exit_b2">닫기</div>
+    </div>
+    <div class="popmenu_b3">
+        <p>
+            <h1>Batch Size 변경</h1>
+            5차, 6차 Batch Size를 조전해서 변화를 관찰 했습니다. 은닉층, 노드, 활성화 함수,<br>
+            학습 횟수는 동일하게 설정하고 5차는 Batch Size를 16, 6차는 32로 설정해서 결과를<br>
+            보겠습니다.
+            <h2>Epoch는 학습의 반복 횟수, Batch는 데이터 샘플의 묶음의 단위입니다.</h2>
+            <img class="img" src="img/deepleaning/batch_model.png" alt="img">
+            <div class="img_title">
+                &#9650; Batch 와 Epoch의 구조
+            </div>
+            <img class="img" src="img/deepleaning/batch_size16.png" alt="img">
+            <div class="img_title">
+                &#9650; 5차 batch size=16, 7일 단위
+            </div>
+            <img class="img" src="img/deepleaning/batch_size32.png" alt="img">
+            <div class="img_title">
+                &#9650; 6차 batch size=32, 7일 단위
+            </div>
+            빨간 박스 안을 보면 batch size가 16일 때 보다 32일 때 실제값에 더 비슷한 모습을<br>
+            한 것을 알 수 있습니다.
+            </p>
+        <div class="exit_b3">닫기</div>
+    </div>
+    <div class="popmenu_b4">
+        <p>
+            <h1>Validation 설정</h1>
+            *Train Set과 *Validation Set을 나누는 비중을 조절해 봤습니다.(데이터는 13년 1월부터<br>
+            16년 12월까지의 값을 사용했습니다.) 처음에는 13년, 14년 데이터를 Train Set으로 15년<br>
+            데이터를 Validation Set, 마지막 16년을 *Test Set으로 사용하면 딱 맞겠다 생각했는데<br>
+            Test Set은 1년을 맞춘다 하더라도 검증 데이터를 꼭 1년으로 해야할지, 만약 비중을 변경<br>
+            하면 어떻게 되는지 테스트 해봤습니다.<br>
+            <h2>Train Set : 모델을 학습하기 위한 dataset</h2>
+            <h2>Validation Set은 학습이 이미 완료된 모델을 검증하기 위한 dataset</h2>
+            <h2>Test Set은 학습과 검증이 완료된 모델의 성능을 평가하기 위한 dataset</h2>
+            <img class="img" src="img/deepleaning/validation_explain.png" alt="">
+            <div class="img_title">
+                &#9650; 신경망 모델에서 데이터를 학습, 평가하는 과정
+            </div>
+            <img class="img" src="img/deepleaning/8th_model.png" alt="img">
+            <div class="img_title">
+                &#9650; 8차 모델
+            </div>
+            <img class="img" src="img/deepleaning/validation365.png" alt="img">
+            <div class="img_title">
+                &#9650; 8차 validation size를 365로 설정한 결과
+            </div>
+            <img class="img" src="img/deepleaning/validation200.png" alt="img">
+            <div class="img_title">
+                &#9650; 8차 validation size를 200으로 설정한 결과
+            </div>
+            <img class="img" src="img/deepleaning/validation_loss.png" alt="img">
+            <div class="img_title">
+                &#9650; 손실 정도의 그래프
+            </div>
+            <h3>Validation Size 365일(왼쪽)/ Validation Size 200일(오른쪽)</h3>
+            그래프 유사도는 365일 버전이 90.736%, 200일 버전이 90.892%로 전체적인<br>
+            수치는 큰 차이가 없었습니다. 손실 정도도 최종적으로는 거의 동일한 값이었으며,<br>
+            이 부분은 전체 학습에 사용된 데이터가 3년에 불과한 적은 양의 데이터이기 때문에<br>
+            큰 차이가 없었다고 생각합니다. 만약 데이터가 많아진다면 데이터 분할의 비중이<br>
+            학습 성능에 미치는 영향은 더 클 것입니다.
+        </p>
+        <div class="exit_b4">닫기</div>
+    </div>
+    <div class="popmenu_b5">
+        <p>
+            <h1>데이터 스케일러 설정</h1>
+            머신러닝, 딥러닝을 위한 데이터셋을 정제할 때 특성별로 데이터의 스케일이 다르면 서로 다른<br>
+            범위로 인해 연관이 있는 특성이 상관관계ㅒ가 없다고 판단되거나 학습이 제대로 되지 않을 수<br>
+            있기 때문에 데이터 스케일링을 통해 모든 특성의 범위를 같게 만들어 줘야합니다.<br>
+            <h3>
+                (Feature에서 젼력 값은 수 천 Watt 단위임에 비해서 기온은 0~40도 사이로 스케일 차이가<br>
+                나서 학습 모델에서 두 특성이 무관한 관계로 판단함.)
+            </h3>
+            스케일링의 종류에는 크게 표준화와 정규화가 있습니다.<br>
+            표준화 >> 특성들의 평균을 0, 분산을 1로 스케일링. 특성들을 정규 분포로 만드는 작업<br>
+            <br>
+            정규화 >> 특성들을 특정 범위로 스케일링. 모든 특성들은 [0,1]의 지정 범위를 가지게 됨<br>
+            <br>
+            대표적인 스케일러를 살펴보면
+            <ul>
+                <li>-Standard Scaler</li>
+                <li>>> 정규 분포로 스케일링</li>
+                <li>>> 최솟값과 최댓값의 크기를 제한하지 않기 때문에 특정 알고리즘에는 맞지 않음.</li>
+                <li>>> 이상치에 매우 민감함</li>
+                <li>>> 회귀보다 분류에 유용</li>
+            </ul>
+            <br>
+            <ul>
+                <li>-MinMax Scaler</li>
+                <li>>> 특성들을 특정 범위로 스케일링</li>
+                <li>>> 이상치에 민감</li>
+                <li>>> 분류보다 회귀에 유용</li>
+            </ul>
+            <br>
+            <ul>
+                <li>-MaxAbs Scaler</li>
+                <li>>> 각 특성의 절대값이 0과 1사이가 되도록 스케일링</li>
+                <li>>> 데이터가 양수일 경우 MinMax Scaler와 동일한 특성을 보임.</li>
+            </ul>
+            <br>
+            <ul>
+                <li>-Robust Scaler</li>
+                <li>>> 평균과 분산 대신 중간 값과 사분위 값을 사용</li>
+                <li>>> 이상치 영향을 최소화 할 수 있음.</li>
+            </ul>
+            <img class="img" src="img/deepleaning/MinMax.png" alt="img">
+            <div class="img_title">
+                &#9650; 7차 MinMax Scaler=A
+            </div>
+            <img class="img" src="img/deepleaning/RobustScaler.png" alt="img">
+            <div class="img_title">
+                &#9650; 7차 Robust Scaler=B
+            </div>
+            <img class="img" src="img/deepleaning/Tunning.png" alt="img">
+            <div class="img_title">
+                &#9650; 7차 이중 정규화(두 모델을 같이 적용한 모델)=C
+            </div>
+        </p>
+        <div class="exit_b5">닫기</div>
     </div>
 </body>
 </html>
