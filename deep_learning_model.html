@@ -250,5 +250,64 @@
         </p>
         <div class="exit_b5">닫기</div>
     </div>
+    <div class="popmenu_b6">
+        <p>
+            <h1>양방향 LSTM 활성화 함수 지정 여부</h1>
+            양방향 LSTM이 설정된 Bidirection 층에서 활성화 함수 'Relu'로 지정해 줄지 아니면<br>
+            기본 Default 설정으로 쓸지 변경했을 때의 차이를 보겠습니다. 활성화 함수 지정 여부를<br>
+            제외하고는 모델 조건은 위 사진과 동일합니다.
+            <img class="img" src="img/deepleaning/9th_model.png" alt="img">
+            <div class="img_title">
+                &#9650; 9차 모델
+            </div>
+            <img class="img" src="img/deepleaning/LSTM_X.png" alt="img">
+            <div class="img_title">
+                &#9650; 9차 양방향 LSTM 활성화 함수 미지정
+            </div>
+            <img class="img" src="img/deepleaning/LSTM_O.png" alt="img">
+            <div class="img_title">
+                &#9650; 9차 양방향 LSTM 활성화 함수 지정
+            </div>
+            <br>
+            양방향 LSTM에 활성화 함수를 지정해 줬을때 수치적인 결과로는 유사도<br>
+            90.994% >> 90.971%, 차의 종합은 36.661 >> 38.282로 큰 변화는<br>
+            없었으나, 시각적으로 높은 값들에 대한 예측은 활성화 함수 지정 버전이<br>
+            좀 더 예측이 정확했습니다.
+        </p>
+        <div class="exit_b6">닫기</div>
+    </div>
+    <div class="popmenu_b7">
+        <p>
+            <h1>실험 종료</h1>
+            최종적으로는 아래와 같은 모델로 학습을 진행했고, 모델 계층은<br>
+            <br>
+            512-512(양방향)-256-256(양방향)128-128(양방향)-64-64(양방향)-32-1 <br>
+            로 구성되어 있습니다. <br>
+            <br>
+            양방향 LSTM의 활성화 함수 지정은 맨 마지막만 하지 않았고, 전체 활성화 함수는<br>
+            'Relu'를 선택했습니다.
+            그 외 조건들은<br>
+            Validation Size = 0.365 <br>
+            Min-Max Scaler <br>
+            학습 주기 = 1일 단위<br>
+            Batch Size = 32 <br>
+            Epoch = 25(조기 종료로 최적값은 15회 부근에서 도출됨)
+            <img class="img" src="img/deepleaning/10th_model_bi.png" alt="img">
+            <div class="img_title">
+                &#9650; 10차 모델(양방향 코드 설명 포함)
+            </div>
+            <img class="img" src="img/deepleaning/10th_model.png" alt="img">
+            <div class="img_title">
+                &#9650; 10차 모델
+            </div>
+            <br>
+            현재는 그래프 유사도 90.971%, 예측값과 실제값의 차 절댓값 총 합은 38.282의<br>
+            수치로 유사도는 높은 수치이며 차 총합의 경우 365일의 최대 오차가 365이므로<br>
+            (1과 0으로 스케일링 했기 때문에 정반대 예측은 하루당 1이 나옴.)<br>
+            38.282/365=0.1049 이를 계산하면 약 90%의 수치적 일치도를 최종적으로<br>
+            확인할 수 있었습니다.
+        </p>
+        <div class="exit_b7">닫기</div>
+    </div>
 </body>
 </html>

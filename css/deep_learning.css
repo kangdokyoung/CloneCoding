@@ -145,7 +145,7 @@ h2{
     cursor: pointer;
 }
 
-.popmenu_b4, .popmenu_b5{
+.popmenu_b4, .popmenu_b5, .popmenu_b6, .popmenu_b7{
     display: none;
     position: absolute;
     left: 50%;
@@ -159,7 +159,7 @@ h2{
     line-height: 30px;
     overflow: auto;
 }
-.exit_b4, .exit_b5{
+.exit_b4, .exit_b5, .exit_b6, .exit_b7{
     position: absolute;
     left: 50%;
     width: 60px;

@@ -57,3 +57,27 @@ $(document).ready(()=>{
 
     });
 });
+
+$(document).ready(()=>{
+    $(".btn6").click(()=>{
+        $(".popmenu_b6").fadeIn();
+        $("#body").css("background-color","rgba(0, 0, 0, 0.2)");
+    });
+    $(".exit_b6").click(()=>{
+        $(".popmenu_b6").fadeOut();
+        $("#body").css("background-color","#fff");
+
+    });
+});
+
+$(document).ready(()=>{
+    $(".btn7").click(()=>{
+        $(".popmenu_b7").fadeIn();
+        $("#body").css("background-color","rgba(0, 0, 0, 0.2)");
+    });
+    $(".exit_b7").click(()=>{
+        $(".popmenu_b7").fadeOut();
+        $("#body").css("background-color","#fff");
+
+    });
+});
