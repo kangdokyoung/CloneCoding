@@ -1,10 +1,13 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
 const router = express.Router();
 
-
+app.use(cors())
 app.use('/api', express.static(__dirname+'/javascript'));
+app.use('/api', express.static(__dirname+'/css'));
+app.use('/api', express.static(__dirname+'/img'));
 
 app.use(express.json());
 
@@ -13,7 +16,7 @@ app.listen(8080, (err)=> {
     console.log('Node.js Server is running on port 8080...');
 });
 
-app.get('/api', (req,res)=> {
+app.get('/', (req,res)=> {
     console.log("index.html loading");
     res.sendFile(__dirname + '/index.html');
 });
