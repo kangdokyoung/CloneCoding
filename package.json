@@ -1,0 +1,22 @@
+{
+  "name": "clonecoding",
+  "version": "1.0.0",
+  "description": "4.11<br>\r 상단 메뉴 만드는 도중 해결 해야 할 문제 : 주변 html로 찍히는 빈공간 지우기(해결)<br>\r 이미지 가져오기(해결)<br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kangdokyoung/CloneCoding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kangdokyoung/CloneCoding/issues"
+  },
+  "homepage": "https://github.com/kangdokyoung/CloneCoding#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
