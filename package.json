@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kangdokyoung/CloneCoding#readme",
   "dependencies": {
+    "app": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.18.1",
     "http": "^0.0.1-security"

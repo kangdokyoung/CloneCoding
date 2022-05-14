@@ -4,7 +4,7 @@ let global_array = [];
 
 window.addEventListener('load', ()=>{
     document.getElementById('month').value = "1";    
-    fetch('http://127.0.0.1:5500/graph_predict.html', {
+    fetch('http://localhost:8080/lstm', {
         method : 'POST',
         headers:{
             'content-Type': 'application/json'
