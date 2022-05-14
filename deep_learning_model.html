@@ -78,28 +78,28 @@
            30일 단위에서는 학습과 예측 주기가 너무 길어서 큰 주기로만 증감이 이뤄지는 문제가 있었습니다.<br>
            <br>
            <h2>Feature에 Watt를 포함하지 않은 모델</h2>
-           <img class="img" src="img/deepleaning/first_day.png" alt="img">
+           <img class="img" src="public/img/deepleaning/first_day.png" alt="img">
            <div class="img_title">
                 &#9650; 1일 단위에서전력 예측값이 거의 직선 형태로 나타나는 모습
            </div>
-           <img class="img" src="img/deepleaning/first_week.png" alt="img">
+           <img class="img" src="public/img/deepleaning/first_week.png" alt="img">
            <div class="img_title">
                 &#9650; 일주일 단위에서는 전력 예측값에 굴곡이 보임
            </div>
-           <img class="img" src="img/deepleaning/first_month.png" alt="img">
+           <img class="img" src="public/img/deepleaning/first_month.png" alt="img">
            <div class="img_title">
                 &#9650; 한 달 단위에서는 큰 줄기로만 굴곡이 보이고 봉우리에서는 거의 변화가 없는 모습
            </div>
            <h2>Feature에 Watt를 포함한 모델</h2>
-           <img class="img" src="img/deepleaning/second_day.png" alt="img">
+           <img class="img" src="public/img/deepleaning/second_day.png" alt="img">
            <div class="img_title">
                 &#9650; Watt 포함 1일 단위 그래프
            </div>
-           <img class="img" src="img/deepleaning/second_week.png" alt="img">
+           <img class="img" src="public/img/deepleaning/second_week.png" alt="img">
            <div class="img_title">
                 &#9650; Watt 포함 일주일 단위 그래프
            </div>
-           <img class="img" src="img/deepleaning/second_month.png" alt="img">
+           <img class="img" src="public/img/deepleaning/second_month.png" alt="img">
            <div class="img_title">
                 &#9650; Watt 포함 한 달 단위 그래프
            </div>
@@ -111,15 +111,15 @@
             <h1>Dense Layer구조 변경</h1>
             Dense Layer는 데이터를 학습 시키는 층을 나타낸 것 입니다. 이 실험에서는 층을 4층으로 설정하고,<br>
             안에 노드의 개수에 따라 예측 결과 값이 어떻게 달라지는 지 확인해보겠습니다.
-            <img class="img" src="img/deepleaning/dense_layer.png" alt="img">
+            <img class="img" src="public/img/deepleaning/dense_layer.png" alt="img">
             <div class="img_title">
                 &#9650; Dense Layer 구조
             </div>
-            <img class="img" src="img/deepleaning/node1.png" alt="img">
+            <img class="img" src="public/img/deepleaning/node1.png" alt="img">
             <div class="img_title">
                 &#9650; 3차 노드1: 64-64-64-1
             </div>
-            <img class="img" src="img/deepleaning/node2.png" alt="img">
+            <img class="img" src="public/img/deepleaning/node2.png" alt="img">
             <div class="img_title">
                 &#9650; 4차 노드2: 64-64-64-2
             </div>
@@ -136,15 +136,15 @@
             학습 횟수는 동일하게 설정하고 5차는 Batch Size를 16, 6차는 32로 설정해서 결과를<br>
             보겠습니다.
             <h2>Epoch는 학습의 반복 횟수, Batch는 데이터 샘플의 묶음의 단위입니다.</h2>
-            <img class="img" src="img/deepleaning/batch_model.png" alt="img">
+            <img class="img" src="public/img/deepleaning/batch_model.png" alt="img">
             <div class="img_title">
                 &#9650; Batch 와 Epoch의 구조
             </div>
-            <img class="img" src="img/deepleaning/batch_size16.png" alt="img">
+            <img class="img" src="public/img/deepleaning/batch_size16.png" alt="img">
             <div class="img_title">
                 &#9650; 5차 batch size=16, 7일 단위
             </div>
-            <img class="img" src="img/deepleaning/batch_size32.png" alt="img">
+            <img class="img" src="public/img/deepleaning/batch_size32.png" alt="img">
             <div class="img_title">
                 &#9650; 6차 batch size=32, 7일 단위
             </div>
@@ -164,23 +164,23 @@
             <h2>Train Set : 모델을 학습하기 위한 dataset</h2>
             <h2>Validation Set은 학습이 이미 완료된 모델을 검증하기 위한 dataset</h2>
             <h2>Test Set은 학습과 검증이 완료된 모델의 성능을 평가하기 위한 dataset</h2>
-            <img class="img" src="img/deepleaning/validation_explain.png" alt="">
+            <img class="img" src="public/img/deepleaning/validation_explain.png" alt="">
             <div class="img_title">
                 &#9650; 신경망 모델에서 데이터를 학습, 평가하는 과정
             </div>
-            <img class="img" src="img/deepleaning/8th_model.png" alt="img">
+            <img class="img" src="public/img/deepleaning/8th_model.png" alt="img">
             <div class="img_title">
                 &#9650; 8차 모델
             </div>
-            <img class="img" src="img/deepleaning/validation365.png" alt="img">
+            <img class="img" src="public/img/deepleaning/validation365.png" alt="img">
             <div class="img_title">
                 &#9650; 8차 validation size를 365로 설정한 결과
             </div>
-            <img class="img" src="img/deepleaning/validation200.png" alt="img">
+            <img class="img" src="public/img/deepleaning/validation200.png" alt="img">
             <div class="img_title">
                 &#9650; 8차 validation size를 200으로 설정한 결과
             </div>
-            <img class="img" src="img/deepleaning/validation_loss.png" alt="img">
+            <img class="img" src="public/img/deepleaning/validation_loss.png" alt="img">
             <div class="img_title">
                 &#9650; 손실 정도의 그래프
             </div>
@@ -235,15 +235,15 @@
                 <li>>> 평균과 분산 대신 중간 값과 사분위 값을 사용</li>
                 <li>>> 이상치 영향을 최소화 할 수 있음.</li>
             </ul>
-            <img class="img" src="img/deepleaning/MinMax.png" alt="img">
+            <img class="img" src="public/img/deepleaning/MinMax.png" alt="img">
             <div class="img_title">
                 &#9650; 7차 MinMax Scaler=A
             </div>
-            <img class="img" src="img/deepleaning/RobustScaler.png" alt="img">
+            <img class="img" src="public/img/deepleaning/RobustScaler.png" alt="img">
             <div class="img_title">
                 &#9650; 7차 Robust Scaler=B
             </div>
-            <img class="img" src="img/deepleaning/Tunning.png" alt="img">
+            <img class="img" src="public/img/deepleaning/Tunning.png" alt="img">
             <div class="img_title">
                 &#9650; 7차 이중 정규화(두 모델을 같이 적용한 모델)=C
             </div>
@@ -256,15 +256,15 @@
             양방향 LSTM이 설정된 Bidirection 층에서 활성화 함수 'Relu'로 지정해 줄지 아니면<br>
             기본 Default 설정으로 쓸지 변경했을 때의 차이를 보겠습니다. 활성화 함수 지정 여부를<br>
             제외하고는 모델 조건은 위 사진과 동일합니다.
-            <img class="img" src="img/deepleaning/9th_model.png" alt="img">
+            <img class="img" src="public/img/deepleaning/9th_model.png" alt="img">
             <div class="img_title">
                 &#9650; 9차 모델
             </div>
-            <img class="img" src="img/deepleaning/LSTM_X.png" alt="img">
+            <img class="img" src="public/img/deepleaning/LSTM_X.png" alt="img">
             <div class="img_title">
                 &#9650; 9차 양방향 LSTM 활성화 함수 미지정
             </div>
-            <img class="img" src="img/deepleaning/LSTM_O.png" alt="img">
+            <img class="img" src="public/img/deepleaning/LSTM_O.png" alt="img">
             <div class="img_title">
                 &#9650; 9차 양방향 LSTM 활성화 함수 지정
             </div>
@@ -292,11 +292,11 @@
             학습 주기 = 1일 단위<br>
             Batch Size = 32 <br>
             Epoch = 25(조기 종료로 최적값은 15회 부근에서 도출됨)
-            <img class="img" src="img/deepleaning/10th_model_bi.png" alt="img">
+            <img class="img" src="public/img/deepleaning/10th_model_bi.png" alt="img">
             <div class="img_title">
                 &#9650; 10차 모델(양방향 코드 설명 포함)
             </div>
-            <img class="img" src="img/deepleaning/10th_model.png" alt="img">
+            <img class="img" src="public/img/deepleaning/10th_model.png" alt="img">
             <div class="img_title">
                 &#9650; 10차 모델
             </div>

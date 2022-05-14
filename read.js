@@ -5,9 +5,7 @@ const cors = require('cors');
 const router = express.Router();
 
 app.use(cors())
-app.use('/api', express.static(__dirname+'/javascript'));
-app.use('/api', express.static(__dirname+'/css'));
-app.use('/api', express.static(__dirname+'/img'));
+app.use(express.static(__dirname+'/public'));
 
 app.use(express.json());
 
@@ -21,27 +19,27 @@ app.get('/', (req,res)=> {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/api/data_collection', (req, res)=>{
+app.get('/data_collection', (req, res)=>{
     console.log("data_collection.html loading");
     res.sendFile(__dirname + '/data_collection.html');
 });
 
-app.get('/api/data_preprocessing', (req, res)=>{
+app.get('/data_preprocessing', (req, res)=>{
     console.log("data_preprocessing.html loading");
     res.sendFile(__dirname + '/data_preprocessing.html');
 });
 
-app.get('/api/deep_learing_model', (req, res)=>{
+app.get('/deep_learing_model', (req, res)=>{
     console.log("deep_learning_model.html loading");
     res.sendFile(__dirname + '/deep_learning_model.html');
 });
 
-app.get('/api/graph_predict', (req, res)=>{
+app.get('/graph_predict', (req, res)=>{
     console.log("graph_predict.html loading");
     res.sendFile(__dirname + '/graph_predict.html');
 });
 
-app.get('/api/reference', (req, res)=>{
+app.get('/reference', (req, res)=>{
     console.log("reference.html loading");
     res.sendFile(__dirname + '/reference.html');
 });
@@ -49,10 +47,10 @@ app.get('/api/reference', (req, res)=>{
 module.exports = {
     devServer: {
         proxy:{
-            '/api' : {
-                target : 'http://127.0.0.1:8080/api',
+            '/' : {
+                target : 'http://127.0.0.1:8080/',
                 changeOrigin: true,
-                pathRewrite: {'^/api': ''},
+                pathRewrite: {'^/': ''},
                 
             }
         }
