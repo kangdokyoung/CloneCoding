@@ -3,8 +3,10 @@ const fs = require('fs');
 const app = express();
 const cors = require('cors');
 
+
+
 app.use(cors())
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(express.json());
 
@@ -28,7 +30,7 @@ app.get('/data_preprocessing', (req, res)=>{
     res.sendFile(__dirname + '/data_preprocessing.html');
 });
 
-app.get('/deep_learing_model', (req, res)=>{
+app.get('/deep_learning_model', (req, res)=>{
     console.log("deep_learning_model.html loading");
     res.sendFile(__dirname + '/deep_learning_model.html');
 });
@@ -57,8 +59,10 @@ module.exports = {
 };
 app.post('/lstm', (req, res)=>{
     let array =[];
+    console.log(req.body.month);
     fs.readFile(`./Data_LSTM/${Number(req.body.month)}m.csv`, "utf-8", (err, data)=>{
-        array = data.split('/r/n').map((value)=>{
+        console.log(data);
+        array = data.split('\n').map((value)=>{
             let jsondata ={
                 index : '',
                 data: '',
@@ -70,7 +74,7 @@ app.post('/lstm', (req, res)=>{
 
             jsondata.index = instdata[0];
 
-            if(instdata[1].length === 12){
+            if(Object.values(instdata[1]).length === 12){
                 indata = instdata[1].substring(0,11);
                 indata += '0' + instdata[1][11];
                 console.log("*indata="+indata+'\r');
@@ -78,7 +82,7 @@ app.post('/lstm', (req, res)=>{
             }else{
                 jsondata.data = instdata[1];
             }
-            jsondata.data;pre = instdata[2];
+            jsondata.pre = instdata[2];
             jsondata.real = instdata[3];
             return jsondata;
         })
@@ -90,7 +94,7 @@ app.post('/lstm', (req, res)=>{
 app.post('/cnn', (req, res)=>{
     let array =[];
     fs.readFile(`./data_CNN+LSTM/${Number(req.body.month)}m.csv`, "utf-8", (err, data)=>{
-        array = data.split('/r/n').map((value)=>{
+        array = data.split('\n').map((value)=>{
             let jsondata ={
                 index : '',
                 data: '',
@@ -110,7 +114,7 @@ app.post('/cnn', (req, res)=>{
             }else{
                 jsondata.data = instdata[1];
             }
-            jsondata.data;pre = instdata[2];
+            jsondata.pre = instdata[2];
             jsondata.real = instdata[3];
             return jsondata;
         })

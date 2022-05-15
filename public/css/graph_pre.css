@@ -32,3 +32,39 @@ select{
     font-size: 20px;
     color: white;
 }
+.data_explain{
+    margin-top: 30px;
+}
+.training_period{
+    width: 300px;
+    height: 100px;
+    font-weight: bold;
+    background-color: #faff00;
+    border-radius: 41px;
+    display: inline-block;
+    text-align: center;
+}
+.validation_period{
+    width: 260px;
+    height: 100px;
+    font-weight: bold;
+    background-color: #00ff47;
+    border-radius: 41px;
+    display: inline-block;
+    text-align: center;
+}
+.test_period{
+    width: 260px;
+    height: 100px;
+    font-weight: bold;
+    background-color: #0ff0ff;
+    border-radius: 41px;
+    display: inline-block;
+    text-align: center;
+}
+.explain_content{
+    text-align: left;
+    line-height: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
